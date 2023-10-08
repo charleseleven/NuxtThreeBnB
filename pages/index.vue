@@ -1,7 +1,9 @@
 <template>
   <div style="display: flex; margin: 10px">
     <div v-for="home in homesArray" :key="home.objectID">
-      <HomeCard :home="home" />
+      <NuxtLink :to="`/home/${home.objectID}`">
+        <HomeCard :home="home" />
+      </NuxtLink>
     </div>
   </div>
 </template>
